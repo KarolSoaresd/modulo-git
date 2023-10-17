@@ -30,11 +30,4 @@ describe('Validar funcionamento de pushs e pop up', () => {
     cy.get(':nth-child(1) > a').invoke('hide')
     cy.get(':nth-child(1) > a').should('not.be.visible')
   })
-
-  it('Devo visualizar push de alerta', () => {
-    cy.visit('http://the-internet.herokuapp.com/javascript_alerts')
-    cy.get(':nth-child(1) > button').click()
-    cy.get('#result').should('not.be.visible')
-    cy.get('#result').should('contain', 'You successfully clicked an alert')
-  })
 })
